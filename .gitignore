@@ -1,0 +1,7 @@
+# 本地调研/备份底稿（不发布）
+_内部底稿/
+
+node_modules/
+*.log
+.DS_Store
+Thumbs.db

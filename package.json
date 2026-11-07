@@ -1,0 +1,51 @@
+{
+  "name": "dsh-side-ask",
+  "version": "0.1.0",
+  "description": "Side-ask panel for DeepSeek Harness: ask a question against the current conversation without writing the Q&A into the main session context.",
+  "license": "MIT",
+  "author": "Qian Su",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "cordis",
+    "side-ask",
+    "context"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rey1831497328-spec/dsh-side-ask.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rey1831497328-spec/dsh-side-ask/issues"
+  },
+  "homepage": "https://github.com/rey1831497328-spec/dsh-side-ask#readme"
+}
